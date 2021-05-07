@@ -11,15 +11,14 @@ var Hangman = (function () {
 
         reset() {
 
-            this.gameEnd = false;
+            this.word = this.wordBank[Math.floor(Math.random() * this.wordBank.length)];
             this.wrong = 0;
             this.guessed = [];
-
-            this.word = this.wordBank[Math.floor(Math.random() * this.wordBank.length)];
+            this.gameEnd = false;
 
             this.hideElementByClass('h');
             this.showElementByIdWithContent(this.id + "_guessbox", null);
-            this.showElementByIdWithContent(this.id + "_word", this.getGuessedfWord());
+            this.showElementByIdWithContent(this.id + "_word", this.getGuessedWord());
         }
 
         guess(letter) {
@@ -31,7 +30,7 @@ var Hangman = (function () {
             }
 
             this.guessed.push(letter);
-            this.showElementByIdWithContent(this.id + "_word", this.getGuessedfWord());
+            this.showElementByIdWithContent(this.id + "_word", this.getGuessedWord());
             this.showElementByIdWithContent(this.id + "_guesses", this.guessed.join(''));
 
             if (this.word.indexOf(letter) < 0) {
@@ -40,12 +39,22 @@ var Hangman = (function () {
                 if (this.wrong === 6) {
                     this.showElementByIdWithContent(this.id + "_end", "FAIL! <br/>The word was: " + this.word + "<br/>Better luck next time!");
                     this.gameEnd = true;
+                    // rick roll here?
+                    window.location.href("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
                 }
-            } else if (this.word.indexOf(this.getGuessedfWord()) !== -1) {
+            } else if (this.word.indexOf(this.getGuessedWord()) !== -1) {
                 this.showElementByIdWithContent(this.id + "_end", "WINNER!<br/>You guessed it!");
                 this.gameEnd = true;
             }
         
+        }
+        getGuessedWord() {
+            var result = "", i;
+            for (i = 0; i < this.word.length; i++) {
+                result += (this.guessed.indexOf(this.word[i]) > -1) ?
+                    this.word[i] : "_";
+            }
+            return result;
         }
         showElementByIdWithContent(id, content) {
             if (content !== null) {
@@ -59,14 +68,7 @@ var Hangman = (function () {
                 elements[i].style.opacity = 0;
             }
         }
-        getGuessedfWord() {
-            var result = "", i;
-            for (i = 0; i < this.word.length; i++) {
-                result += (this.guessed.indexOf(this.word[i]) > -1) ?
-                    this.word[i] : "_";
-            }
-            return result;
-        }
+
     }
 
     return new Hangman('hangm');    
