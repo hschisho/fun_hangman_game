@@ -21,10 +21,10 @@ var Hangman = (function () {
             this.showElementByIdWithContent(this.id + "_word", this.getGuessedWord());
         }
 
-        hahaButton() {
+        /*hahaButton() {
             // rick roll here?
-            window.location.href("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-        }
+            location.href("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        }*/
 
         guess(letter) {
             letter = letter.charAt(0).toLowerCase();
