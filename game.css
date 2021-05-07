@@ -40,18 +40,17 @@ section#hangman {
 
 .man_head {
 	border-radius: 50%;
-	width: 40px;
-	height: 40px; 
-    background-color: #FFCC99;
+	width: 30px;
+	height: 30px; 
+    background-color: #000000;
     position: relative;
     bottom: 150px;
     left: 112px;
-	/* width and height can be anything, as long as they're equal */
 }
 
 .man_upper {
-    background: #000066;
-    width: 40px;
+    background: #000000;
+    width: 5px;
     height: 50px;
     position: relative;
     left: 112px;
@@ -59,9 +58,9 @@ section#hangman {
 }
 
 .man_lower {
-    background: #330099;
-    width: 30px;
-    height: 30px;
+    background: #000000;
+    width: 10px;
+    height: 10px;
     position: relative;
     left: 117px;
     bottom: 150px;
@@ -96,7 +95,7 @@ section#hangman {
 .rope {
     width: 6px;
     height: 40px;
-    background-color: #996633;
+    background-color: #d6a069;
     position: relative;
     bottom: 150px;
     left: 130px;

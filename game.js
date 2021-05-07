@@ -5,7 +5,7 @@ var Hangman = (function () {
         constructor(id) {
             this.id = id;
             this.wordBank = [
-                'who', 'would', 'not', 'love', 'comp', 'four', 'twenty', 'six'
+                'tar', 'heels', 'carolina', 'university', 'north', 'computer', 'science', 'kmp'
             ];
         }
 
