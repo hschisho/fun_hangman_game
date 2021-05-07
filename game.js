@@ -8,7 +8,7 @@ var Hangman = (function () {
                 'tar', 'heels', 'carolina', 'university', 'north', 'computer', 'science', 'kmp'
             ];
         }
-        
+
         reset() {
 
             this.gameEnd = false;
@@ -38,13 +38,14 @@ var Hangman = (function () {
                 this.wrong++;
                 this.showElementByIdWithContent(this.id + "_" + this.wrong, null);
                 if (this.wrong === 6) {
-                    this.showElementByIdWithContent(this.id + "_end", "GAME OVER!<br/>The word was: " + this.word);
+                    this.showElementByIdWithContent(this.id + "_end", "FAIL! <br/>The word was: " + this.word + "<br/>Better luck next time!");
                     this.gameEnd = true;
                 }
             } else if (this.word.indexOf(this.getGuessedfWord()) !== -1) {
-                this.showElementByIdWithContent(this.id + "_end", "You made it!<br/>The word was: " + this.word);
+                this.showElementByIdWithContent(this.id + "_end", "WINNER!<br/>You guessed it!");
                 this.gameEnd = true;
             }
+        
         }
         showElementByIdWithContent(id, content) {
             if (content !== null) {

@@ -2,6 +2,7 @@ html,body {
     font-size: 1.2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    background-color: lightskyblue;
 }
 
 a {
@@ -12,6 +13,7 @@ a {
 
 #hangm_gameover, #hangm_victory {
     font-size: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 section#hangman {
@@ -40,8 +42,8 @@ section#hangman {
 
 .man_head {
 	border-radius: 50%;
-	width: 30px;
-	height: 30px; 
+	width: 40px;
+	height: 40px; 
     background-color: #000000;
     position: relative;
     bottom: 150px;
