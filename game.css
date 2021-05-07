@@ -52,7 +52,7 @@ section#hangman {
 }
 
 .man_upper {
-    background: #ffffff;
+    background: #e4a8fc;
     width: 40px;
     height: 50px;
     position: relative;
@@ -61,7 +61,7 @@ section#hangman {
 }
 
 .man_lower {
-    background: #ffffff;
+    background: #160d63;
     width: 30px;
     height: 30px;
     position: relative;
