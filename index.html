@@ -9,6 +9,9 @@
             <div class="col-sm-3">
                 <button type="button" id="btn-start" class="btn-lg btn-info" onclick="Hangman.reset(); return false;" >New Game</button>
             </div>
+            <div style="height: 3em; margin-bottom: 3em;">
+                <div id="hangm_end" class="h"></div>
+            </div>
 
                 <div id="hangm_animation">
                     <div id="hangm_2" class="h pole_h"></div>
@@ -33,9 +36,7 @@
                         <input id="guess" onkeyup="Hangman.guess(this.value); this.value=''; return false;" type="text" placeholder="">
                     </div>
 
-                    <div style="height: 2em; margin-bottom: 3em;">
-                        <div id="hangm_end" class="h"></div>
-                    </div>
+
 
 
                 </form>
