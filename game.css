@@ -45,14 +45,14 @@ section#hangman {
 	border-radius: 50%;
 	width: 40px;
 	height: 40px; 
-    background-color: #000000;
+    background-color: #ffffff;
     position: relative;
     bottom: 150px;
     left: 112px;
 }
 
 .man_upper {
-    background: #000000;
+    background: #ffffff;
     width: 40px;
     height: 50px;
     position: relative;
@@ -61,7 +61,7 @@ section#hangman {
 }
 
 .man_lower {
-    background: #000000;
+    background: #ffffff;
     width: 30px;
     height: 30px;
     position: relative;
@@ -98,7 +98,7 @@ section#hangman {
 .rope {
     width: 6px;
     height: 40px;
-    background-color: #ffffff;
+    background-color: #000000;
     position: relative;
     bottom: 150px;
     left: 130px;
