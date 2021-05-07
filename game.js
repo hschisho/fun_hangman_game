@@ -8,7 +8,7 @@ var Hangman = (function () {
                 'tar', 'heels', 'carolina', 'university', 'north', 'computer', 'science', 'kmp'
             ];
         }
-
+        
         reset() {
 
             this.gameEnd = false;
