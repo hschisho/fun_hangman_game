@@ -21,6 +21,11 @@ var Hangman = (function () {
             this.showElementByIdWithContent(this.id + "_word", this.getGuessedWord());
         }
 
+        hahaButton() {
+            // rick roll here?
+            window.location.href("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        }
+
         guess(letter) {
             letter = letter.charAt(0).toLowerCase();
             // lowercase it
@@ -39,8 +44,6 @@ var Hangman = (function () {
                 if (this.wrong === 6) {
                     this.showElementByIdWithContent(this.id + "_end", "FAIL! <br/>The word was: " + this.word + "<br/>Better luck next time!");
                     this.gameEnd = true;
-                    // rick roll here?
-                    window.location.href("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
                 }
             } else if (this.word.indexOf(this.getGuessedWord()) !== -1) {
                 this.showElementByIdWithContent(this.id + "_end", "WINNER!<br/>You guessed it!");
